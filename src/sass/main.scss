@@ -4,6 +4,14 @@ body {
 	background-color: black;
 }
 
+.container {
+	position: relative;
+	overflow: hidden;
+	width: 480px;
+	margin: 50px auto auto auto;
+	background-color: white;
+	}
+
 div {
 	.header {
 		width: 480px;
@@ -11,23 +19,20 @@ div {
 		font-size: 27px;
 		background-color: #00c6d6;
 		border-bottom: 1px solid black;
+		overflow: hidden;
 		&:hover {
 			border: 1px solid #00daec;
 			background-color: #00daec;
 		}
 	}
-	.para {
-		width: 480px;
-		background-color: white;
-	}
-	.two {
-		position: absolute;
-		top: calc(100% - 96px);
-	}
-	.three {
-		position: absolute;
-		top: calc(100% - 48px);
-	}
+}
+
+.para {
+	width: 480px;
+	background-color: white;
+	max-height: 0px;
+	transition: 2s ease;
+	overflow: hidden;
 }
 
 p {
@@ -36,25 +41,21 @@ p {
 	color: white;
 }
 
-.container {
-	position: relative;
-	overflow: hidden;
-	width: 480px;
-	height: 350px;
-	margin: 50px auto auto auto;
-	background-color: white;
-	}
-
 #three-h {
 	border-bottom: none;
 }
 
-#trans-2 {
-	position: absolute;
-	top: 48px;
+.trans-one {
+	max-height: 144px;
+	transition: 2s ease;
 }
 
-#trans-3 {
-	position: absolute;
-	top: 96px;
+.trans-two {
+	max-height: 198px;
+	transition: 2s ease;
+}
+
+.trans-three {
+	max-height: 162px;
+	transition: 2s ease;
 }
